@@ -1,0 +1,31 @@
+<apex:page controller="wrapper1" id="wrap">
+<apex:form id="frm" >
+
+<script language="javascript"> 
+  function testFunction(){
+      alert(options);
+  }
+  </script>
+
+<apex:pageblock >
+     <apex:pageblockButtons > 
+          <apex:commandButton value="Save" action="{!saveObjects}" onclick="testFunction()"/>
+     </apex:pageblockButtons>
+     <apex:pageblocksection > 
+
+           <apex:inputfield value="{!myA.Name}" id="nam"/>
+           <script> var options = document.getElementById("{!$Component.nam}"); options.value='TEST';</script>
+         <!-- add any other fields you want for this object -->.
+   
+      </apex:pageblocksection> 
+
+     <apex:pageblocksection >
+           
+          <apex:inputfield value="{!myB.Name}"/><br/>
+          <apex:inputfield value="{!myC.LastName}"/><br/> 
+          
+     </apex:pageblocksection>
+
+</apex:pageblock>
+</apex:form>
+</apex:page>

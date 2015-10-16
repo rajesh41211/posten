@@ -1,0 +1,20 @@
+<apex:page controller="wrapper">
+
+    <apex:form >
+        <apex:selectList value="{!selectedSobject}" multiselect="false" size="1" >
+            <apex:selectOption itemValue="Account" itemLabel="Accounts"/>
+            <apex:inputText value="{!values}" label="Text"/>
+            <apex:selectOption itemValue="Contact" itemLabel="Contacts"/>
+            <apex:selectOption itemValue="Opportunity" itemLabel="Opportunity"/>
+             <apex:selectOption itemValue="Call__c" itemLabel="Call"/>
+        </apex:selectList>
+        
+        <apex:commandButton value="Search" action="{!doSearch}"/>
+    </apex:form>
+    <apex:pageBlock >
+        <apex:pageblockTable value="{!lstQuery}" var="eachRecord">
+            <apex:column value="{!eachRecord.id}"/>
+            <apex:column value="{!eachRecord['Name']}"/>
+        </apex:pageblockTable>
+    </apex:pageBlock>
+</apex:page>

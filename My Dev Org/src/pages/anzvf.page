@@ -1,0 +1,95 @@
+<apex:page standardController="Survey__c" extensions="Survey" sidebar="false" showHeader="false">
+  
+  <apex:image id="logo1" url="{!$Resource.harley}" width="220" height="150" />
+  <apex:image id="logo2" url="{!$Resource.trumph2}" width="220" height="150"/>
+  <apex:image id="logo3" url="{!$Resource.harley6}" width="220" height="150"/>
+  <apex:image id="logo4" url="{!$Resource.harley8}" width="220" height="150"/>
+  <apex:image id="logo5" url="{!$Resource.harley5}" width="220" height="150"/>
+  <apex:image id="logo6" url="{!$Resource.harley4}" width="220" height="150"/>
+
+   <apex:form style="background-color:#FFFFFF;"> 
+    <center><h4><font size="6" face="verdana" color="green" align="center">Tquila Motorbikes Survey Form</font></h4></center><br/>
+    <style type="text/css">
+        body {font-family:Arial Unicode MS;font-size:12px;}
+        P{background-color:#006400;HEIGHT:20PX;font-size:12px;font-weight:bold;color:#FFFFFF;}  
+        .myClass { width: 400px;height: 100px; }
+        .myalign { l: align:right; }         
+    }
+    </style>
+
+   <apex:pageBlock id="pageblock" > 
+  <center>
+     <apex:commandButton value="Step 1" action="{!Step1}" style="width:350px;font-weight:800;font-size: 15px;background:{!IF(!stp1==true, 'grey', 'yellow')};"/>
+     <apex:commandButton value="Step 2" action="{!Step2}" style="width:350px;font-weight:800;font-size: 15px;background:{!IF(!stp2==true, 'grey', 'yellow')};" />
+     <apex:commandButton value="Step 3" action="{!Step3}" style="width:350px;font-weight:800;font-size: 15px;background:{!IF(!stp3==true, 'grey', 'yellow')};"/><br/>
+  </center>
+ <apex:pageBlockSection collapsible="false"  columns="2" showHeader="true" onmouseover="hover">
+     
+ <div align="center">
+  <!-- Step 1  --> 
+         <apex:panelGrid columns="2" width="900px" rendered="{!stp1}" style="font-weight:normal;text-align:left;"> 
+         <apex:outputText value="Please select Product:">
+         </apex:outputText>
+         <apex:inputField value="{!Survey__c.Product__c}" required="true"/>
+         
+             <apex:outputText value="Contact">
+            </apex:outputText>
+            <apex:inputField value="{!Survey__c.Contact__c}"/>
+        
+             <apex:outputText value="Customer Type" >
+             </apex:outputText>
+             <apex:inputField value="{!Survey__c.Customer_Type__c}"/> 
+             
+               <apex:outputText value=""/><apex:outputText value=""/><apex:outputText value=""/><apex:outputText value=""/><apex:outputText value=""/><apex:outputText value=""/><apex:outputText value=""/><apex:outputText value=""/>
+            <div align="right"><apex:commandButton action="{!Step2}" value="Next" reRender="pageblock"/></div>
+             </apex:panelGrid>
+    </div>
+  <!-- Step 2  -->  
+  
+          <apex:actionFunction name="callClass" action="{!Step2}" rerender="true" />
+          
+        
+          <apex:panelGrid columns="2"  rendered="{!stp2}" style="font-weight:normal;text-align:left;">
+         
+            <apex:outputText value="Overall satisfaction">
+            </apex:outputText>
+            <apex:inputField value="{!Survey__c.Overall_Satisfaction__c}"/>
+            
+         
+             <apex:outputText value="Which rep did you work with ">
+             </apex:outputText>
+            <apex:inputField value="{!Survey__c.User__c}" required="true"/>
+            
+            
+            <apex:outputText value="Comments ">
+             </apex:outputText>
+            <apex:inputField value="{!Survey__c.Comments__c}" styleClass="myClass" />
+         <apex:outputText value=""/><apex:outputText value=""/><apex:outputText value=""/><apex:outputText value=""/><apex:outputText value=""/><apex:outputText value=""/><apex:outputText value=""/><apex:outputText value=""/>   
+             <apex:commandButton action="{!Step1}" value="Previous" reRender="pageblock" style="left:0px;position:relative;">
+        
+        <apex:commandButton action="{!Step3}" value="Next" reRender="pageblock" style="left:0px;position:relative;">
+         <apex:param id="contactName" value="{!Survey__c.Contact__c}" name="contactName" />
+            </apex:commandButton>
+      
+       </apex:commandButton>
+             </apex:panelGrid>
+      
+     <!-- Step 3  --> 
+     
+         <apex:actionFunction name="callClass" action="{!Step3}" rerender="true" />
+      <div align="center">       
+          <apex:panelGrid columns="1" rendered="{!stp3}" style="font-weight:bold;text-align:center;">          
+         
+          Thanks for your time {!contactName}!<br/><br/><br/>
+           Please Press Submit Button to submit your survey and be entered to win a free motorcycle!<br/><br/>
+          <apex:commandButton action="{!Save}" value="Submit" />         
+   
+     </apex:panelGrid>
+     
+ </div>    
+     </apex:pageBlockSection>
+ </apex:pageBlock> 
+  <div align="right"><font-family="Calibri" size="1">&copy; {!dateValue2} designed by Tquila Motorbikes Ltd</f> </div>   
+
+ </apex:form> 
+</apex:page>

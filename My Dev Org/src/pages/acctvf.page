@@ -1,0 +1,34 @@
+<apex:page standardController="Account" extensions="acctvf" tabStyle="account" showheader="true">
+<script>
+body { box-sizing: border-box; height: 11in; margin: 0 left; overflow: hidden; padding: 0.5in; width: 8.5in; }
+
+</script>
+ <apex:form style="float:auto;" >
+ <apex:pageBlock >
+    <div style="border-collapse: separate; border-spacing: 10px;">
+
+    <apex:pageBlockSection columns="1" collapsible="{!acctvf.size>0}" rendered="{!rendr}">
+       <apex:pageBlockTable value="{!acctvf}" var="c">
+        <apex:column headerValue="Action">
+        <apex:inputCheckbox value="{!c.Name}" selected="true"/>
+          
+        <apex:commandLink action="{!editItem}"  value="Edit">
+        <apex:param name="ecid" value="{!c.id}" assignTo="{!ecid}"/>
+        
+        
+        </apex:commandLink>&nbsp;||&nbsp;
+        <apex:commandLink value="Del" onclick="return confirm('Are you sure?');"  action="{!delItem}"> 
+        <apex:param name="dcid" value="{!c.id}" assignTo="{!dcid}"/>  
+        </apex:commandLink>    
+        </apex:column>
+        
+             <apex:column value="{!c.Name}" headerValue="Name"/>
+             <apex:column value="{!c.Account__c}" headerValue="Account"/>  
+             
+            </apex:pageBlockTable>
+      </apex:pageBlockSection>
+      </div>
+      </apex:pageBlock>
+   
+ </apex:form>
+</apex:page>
