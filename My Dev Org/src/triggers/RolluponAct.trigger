@@ -6,13 +6,6 @@ trigger RolluponAct on Account (before update, before insert) {
  	
  	VERSION 1
  	
- 	VERSION 2
- 	
- 	VERSION 3
- 	
- 	VERSION 4
- 	
- 	VERSION 5
  	*/
  
  }
