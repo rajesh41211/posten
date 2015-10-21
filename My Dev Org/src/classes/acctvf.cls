@@ -13,6 +13,7 @@ public boolean rendr{get;set;}
            actids=ApexPages.CurrentPage().getparameters().get('id'); 
            rendr=true;
             }
+            //version 1
 
 public test__c[] getacctvf(){
     a=true;
