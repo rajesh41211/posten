@@ -48,6 +48,9 @@
         <fullName>DunsNumber</fullName>
     </fields>
     <fields>
+        <fullName>EmployeeQuantityGrowthRate</fullName>
+    </fields>
+    <fields>
         <fullName>EmployeesHere</fullName>
     </fields>
     <fields>
@@ -75,6 +78,12 @@
         <fullName>FifthSic</fullName>
     </fields>
     <fields>
+        <fullName>FifthSic8</fullName>
+    </fields>
+    <fields>
+        <fullName>FifthSic8Desc</fullName>
+    </fields>
+    <fields>
         <fullName>FifthSicDesc</fullName>
     </fields>
     <fields>
@@ -84,6 +93,9 @@
         <fullName>FipsMsaDesc</fullName>
     </fields>
     <fields>
+        <fullName>FortuneRank</fullName>
+    </fields>
+    <fields>
         <fullName>FourthNaics</fullName>
     </fields>
     <fields>
@@ -91,6 +103,12 @@
     </fields>
     <fields>
         <fullName>FourthSic</fullName>
+    </fields>
+    <fields>
+        <fullName>FourthSic8</fullName>
+    </fields>
+    <fields>
+        <fullName>FourthSic8Desc</fullName>
     </fields>
     <fields>
         <fullName>FourthSicDesc</fullName>
@@ -109,6 +127,9 @@
     </fields>
     <fields>
         <fullName>ImportExportAgent</fullName>
+    </fields>
+    <fields>
+        <fullName>IncludedInSnP500</fullName>
     </fields>
     <fields>
         <fullName>Latitude</fullName>
@@ -156,6 +177,15 @@
         <fullName>Phone</fullName>
     </fields>
     <fields>
+        <fullName>PremisesMeasure</fullName>
+    </fields>
+    <fields>
+        <fullName>PremisesMeasureReliability</fullName>
+    </fields>
+    <fields>
+        <fullName>PremisesMeasureUnit</fullName>
+    </fields>
+    <fields>
         <fullName>PrimaryNaics</fullName>
     </fields>
     <fields>
@@ -165,10 +195,25 @@
         <fullName>PrimarySic</fullName>
     </fields>
     <fields>
+        <fullName>PrimarySic8</fullName>
+    </fields>
+    <fields>
+        <fullName>PrimarySic8Desc</fullName>
+    </fields>
+    <fields>
         <fullName>PrimarySicDesc</fullName>
     </fields>
     <fields>
+        <fullName>PriorYearEmployees</fullName>
+    </fields>
+    <fields>
+        <fullName>PriorYearRevenue</fullName>
+    </fields>
+    <fields>
         <fullName>PublicIndicator</fullName>
+    </fields>
+    <fields>
+        <fullName>SalesTurnoverGrowthRate</fullName>
     </fields>
     <fields>
         <fullName>SalesVolume</fullName>
@@ -186,6 +231,12 @@
         <fullName>SecondSic</fullName>
     </fields>
     <fields>
+        <fullName>SecondSic8</fullName>
+    </fields>
+    <fields>
+        <fullName>SecondSic8Desc</fullName>
+    </fields>
+    <fields>
         <fullName>SecondSicDesc</fullName>
     </fields>
     <fields>
@@ -196,6 +247,12 @@
     </fields>
     <fields>
         <fullName>SixthSic</fullName>
+    </fields>
+    <fields>
+        <fullName>SixthSic8</fullName>
+    </fields>
+    <fields>
+        <fullName>SixthSic8Desc</fullName>
     </fields>
     <fields>
         <fullName>SixthSicDesc</fullName>
@@ -220,6 +277,12 @@
     </fields>
     <fields>
         <fullName>ThirdSic</fullName>
+    </fields>
+    <fields>
+        <fullName>ThirdSic8</fullName>
+    </fields>
+    <fields>
+        <fullName>ThirdSic8Desc</fullName>
     </fields>
     <fields>
         <fullName>ThirdSicDesc</fullName>
@@ -252,12 +315,10 @@
         <fullName>YearStarted</fullName>
     </fields>
     <searchLayouts>
-        <customTabListAdditionalFields>Name</customTabListAdditionalFields>
         <customTabListAdditionalFields>LocationStatus</customTabListAdditionalFields>
         <customTabListAdditionalFields>DunsNumber</customTabListAdditionalFields>
         <customTabListAdditionalFields>Phone</customTabListAdditionalFields>
         <customTabListAdditionalFields>URL</customTabListAdditionalFields>
-        <searchResultsAdditionalFields>Name</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>LocationStatus</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>DunsNumber</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Phone</searchResultsAdditionalFields>

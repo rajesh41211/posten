@@ -73,6 +73,9 @@
         <fullName>EndDateTime</fullName>
     </fields>
     <fields>
+        <fullName>EventSubtype</fullName>
+    </fields>
+    <fields>
         <fullName>IsAllDayEvent</fullName>
     </fields>
     <fields>

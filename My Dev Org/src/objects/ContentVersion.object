@@ -16,7 +16,6 @@
     </fields>
     <fields>
         <fullName>FileType</fullName>
-        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Language</fullName>
@@ -26,6 +25,10 @@
         <fullName>OwnerId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SharingOption</fullName>
+        <trackHistory>true</trackHistory>
     </fields>
     <fields>
         <fullName>TagCsv</fullName>

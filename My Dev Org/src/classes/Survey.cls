@@ -1,5 +1,4 @@
 public class Survey {
-
     
   public list<Survey__c> Surveylist{get;set;}
   public string ids;  

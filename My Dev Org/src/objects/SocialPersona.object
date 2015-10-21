@@ -54,9 +54,7 @@
         <fullName>SourceApp</fullName>
     </fields>
     <searchLayouts>
-        <customTabListAdditionalFields>Name</customTabListAdditionalFields>
         <customTabListAdditionalFields>Provider</customTabListAdditionalFields>
-        <searchResultsAdditionalFields>Name</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Provider</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>

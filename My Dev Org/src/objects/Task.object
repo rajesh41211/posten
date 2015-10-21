@@ -154,6 +154,9 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>TaskSubtype</fullName>
+    </fields>
+    <fields>
         <fullName>Type</fullName>
         <picklist>
             <picklistValues>

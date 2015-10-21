@@ -1,12 +1,13 @@
 <apex:page standardController="Survey__c" extensions="Survey" sidebar="false" showHeader="false">
   
+ <!--
   <apex:image id="logo1" url="{!$Resource.harley}" width="220" height="150" />
   <apex:image id="logo2" url="{!$Resource.trumph2}" width="220" height="150"/>
   <apex:image id="logo3" url="{!$Resource.harley6}" width="220" height="150"/>
   <apex:image id="logo4" url="{!$Resource.harley8}" width="220" height="150"/>
   <apex:image id="logo5" url="{!$Resource.harley5}" width="220" height="150"/>
   <apex:image id="logo6" url="{!$Resource.harley4}" width="220" height="150"/>
-
+-->
    <apex:form style="background-color:#FFFFFF;"> 
     <center><h4><font size="6" face="verdana" color="green" align="center">Tquila Motorbikes Survey Form</font></h4></center><br/>
     <style type="text/css">
@@ -77,15 +78,22 @@
      <!-- Step 3  --> 
      
          <apex:actionFunction name="callClass" action="{!Step3}" rerender="true" />
-      <div align="center">       
+      <div align="center"> 
+     
+      
           <apex:panelGrid columns="1" rendered="{!stp3}" style="font-weight:bold;text-align:center;">          
          
           Thanks for your time {!contactName}!<br/><br/><br/>
            Please Press Submit Button to submit your survey and be entered to win a free motorcycle!<br/><br/>
-          <apex:commandButton action="{!Save}" value="Submit" />         
-   
+           
+           
+              <apex:commandButton action="{!Step2}" value="Previous">  
+              <apex:commandButton action="{!Save}" value="Submit" > </apex:commandButton>        </apex:commandButton> 
+         
+
      </apex:panelGrid>
      
+
  </div>    
      </apex:pageBlockSection>
  </apex:pageBlock> 
